@@ -20,6 +20,7 @@
     TableViewController *tableViewController = [[TableViewController alloc] init];
     
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:tableViewController];
+//    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:menuViewController];
     self.window.rootViewController = nvc;
     
     

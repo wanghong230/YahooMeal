@@ -63,12 +63,14 @@
 //        customCell = [cell.contentView viewWithTag:230];
 //    }
     
-    static NSString * CellIndetifier = @"CustomerCell";
+    static NSString * CellIndetifier = @"CustomCell";
     CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIndetifier];
     if(cell == nil) {
         cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndetifier];
     }
 
+    [cell.like addTarget:self action:@selector(onLikeButton:) forControlEvents:UIControlEventAllEvents];
+    NSLog(@"oKAY");
     
     // Configure the cell...
     if(indexPath.row == 0) {
@@ -123,6 +125,10 @@
     dish.sectionSelectedPreviously = indexPath.section;
     [self.navigationController pushViewController:dish animated:TRUE];
     NSLog(@"The section:%d The row:%d", indexPath.section, indexPath.row);
+}
+
+- (void) onLikeButton:(UIButton *)likeButton {
+    NSLog(@"oKAY");
 }
 
 @end

@@ -70,6 +70,11 @@
     }
     
     
+    [cell.like addTarget:self action:@selector(onTouchup:) forControlEvents:UIControlEventTouchDown];
+    [cell.dislike addTarget:self action:@selector(onTouchup:) forControlEvents:UIControlEventTouchDown];
+    
+//    CustomCell *cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndetifier];
+    
     // Configure the cell...
     if(indexPath.row == 0) {
         cell.category.text = @"Pizza Special";
@@ -163,6 +168,27 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    return 90;
+    return 100;
+}
+
+//- (void) onLikeButton:(UIButton *)likeButton {
+//    NSLog(@"Like Pushed");
+//    likeButton.
+//
+//    [likeButton setHighlighted:YES];
+////    [likeButton setSelected:TRUE];
+//}
+//
+//- (void) onDislikeButton:(UIButton *)dislikeButton {
+//    NSLog(@"Dislike Pushed");
+//    [dislikeButton setHighlighted:TRUE];
+//}
+
+- (void)highlightButton:(UIButton *)b {
+    [b setHighlighted:YES];
+}
+
+- (IBAction)onTouchup:(UIButton *)sender {
+    [self performSelector:@selector(highlightButton:) withObject:sender afterDelay:0.0];
 }
 @end
