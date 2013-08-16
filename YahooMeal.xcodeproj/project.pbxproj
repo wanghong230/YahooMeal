@@ -27,6 +27,7 @@
 		E38D7DC317BDF2ED00183E5A /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E38D7DC117BDF2ED00183E5A /* MenuViewController.xib */; };
 		E38D7DC717BDFAC900183E5A /* DishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D7DC517BDFAC900183E5A /* DishViewController.m */; };
 		E38D7DC817BDFAC900183E5A /* DishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E38D7DC617BDFAC900183E5A /* DishViewController.xib */; };
+		E3D35E7417BE0B790042F726 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D35E7317BE0B790042F726 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		E38D7DC417BDFAC900183E5A /* DishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishViewController.h; sourceTree = "<group>"; };
 		E38D7DC517BDFAC900183E5A /* DishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishViewController.m; sourceTree = "<group>"; };
 		E38D7DC617BDFAC900183E5A /* DishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishViewController.xib; sourceTree = "<group>"; };
+		E3D35E7217BE0B790042F726 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		E3D35E7317BE0B790042F726 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				E38D7D9117BDF19B00183E5A /* AppDelegate.h */,
 				E38D7D9217BDF19B00183E5A /* AppDelegate.m */,
 				E38D7DB717BDF1FC00183E5A /* CustomCell.h */,
+				E3D35E7217BE0B790042F726 /* TableViewController.h */,
+				E3D35E7317BE0B790042F726 /* TableViewController.m */,
 				E38D7DB817BDF1FC00183E5A /* CustomCell.m */,
 				E38D7DB917BDF1FC00183E5A /* CustomCell.xib */,
 				E38D7DC417BDFAC900183E5A /* DishViewController.h */,
@@ -293,6 +298,7 @@
 				E38D7DBA17BDF1FC00183E5A /* CustomCell.m in Sources */,
 				E38D7DC217BDF2ED00183E5A /* MenuViewController.m in Sources */,
 				E38D7DC717BDFAC900183E5A /* DishViewController.m in Sources */,
+				E3D35E7417BE0B790042F726 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +473,7 @@
 				E38D7DB317BDF19B00183E5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E38D7DB417BDF19B00183E5A /* Build configuration list for PBXNativeTarget "YahooMealTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +482,7 @@
 				E38D7DB617BDF19B00183E5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

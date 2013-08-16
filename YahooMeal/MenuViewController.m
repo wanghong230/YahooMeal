@@ -30,6 +30,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UINib *customNib = [UINib nibWithNibName:@"CustomCell" bundle:nil];
+    [mainTableView registerNib:customNib forCellReuseIdentifier:@"CustomCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,11 +51,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCell"];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCell"];
+//    CustomCell *customCell = nil;
+//    
+//    if(cell == nil) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CustomCell"];
+//        customCell = [[CustomCell alloc] init];
+//        customCell.tag = 230;
+//        [cell.contentView addSubview:customCell];
+//    } else {
+//        customCell = [cell.contentView viewWithTag:230];
+//    }
     
+    static NSString * CellIndetifier = @"CustomerCell";
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIndetifier];
     if(cell == nil) {
-        cell = [[CustomCell alloc] initWithStyle:nil reuseIdentifier:@"CustomCell"];
+        cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndetifier];
     }
+
     
     // Configure the cell...
     if(indexPath.row == 0) {

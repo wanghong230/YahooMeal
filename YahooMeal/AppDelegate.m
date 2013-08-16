@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MenuViewController.h"
+#import "TableViewController.h"
 
 @implementation AppDelegate
 
@@ -15,8 +16,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    MenuViewController *menuViewController = [[MenuViewController alloc] init];
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:menuViewController];
+//    MenuViewController *menuViewController = [[MenuViewController alloc] init];
+    TableViewController *tableViewController = [[TableViewController alloc] init];
+    
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:tableViewController];
     self.window.rootViewController = nvc;
     
     
